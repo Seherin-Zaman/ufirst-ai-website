@@ -1,0 +1,41 @@
+import type { SiteSettings } from "@/types/content";
+
+/**
+ * Site settings (CMS: "Site settings" singleton).
+ * Contact details are PLACEHOLDERS — replace with the real values.
+ */
+export const siteSettings: SiteSettings = {
+  name: "uFirst.Ai",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.ufirst.ai",
+  tagline: "Reusable AI technology. Tailored systems for individual businesses.",
+  description:
+    "uFirst.Ai is an AI-powered business automation platform. One technology foundation, configured into tailored AI systems for individual businesses.",
+  navigation: [
+    { label: "Home", href: "/" },
+    { label: "About Us", href: "/about" },
+    { label: "Our Services", href: "/services" },
+    { label: "Partners", href: "/partners" },
+    { label: "Resources", href: "/blog" },
+    { label: "Contact", href: "/contact" },
+  ],
+  primaryCta: { label: "Book a Consultation", href: "/contact" },
+  contact: {
+    address: { value: "Office address to be supplied", isPlaceholder: true },
+    phone: { value: "Phone number to be supplied", isPlaceholder: true },
+    email: { value: "ufirst.ai.2026@gmail.com", isPlaceholder: false },
+    whatsapp: { value: "+44 7454 935517", isPlaceholder: false },
+    // Paste a Google Maps embed URL here once the office address is confirmed.
+    mapEmbedUrl: undefined,
+  },
+  // Add `href` values when real profiles exist. Entries without href are not linked.
+  social: [
+    { platform: "LinkedIn" },
+    { platform: "X" },
+    { platform: "YouTube" },
+  ],
+  seo: {
+    title: "uFirst AI — Build Smarter. Automate Faster. Scale with AI.",
+    description:
+      "uFirst AI delivers intelligent AI Agents, Automation and Custom AI Solutions that transform business operations, customer experience and growth.",
+  },
+};
