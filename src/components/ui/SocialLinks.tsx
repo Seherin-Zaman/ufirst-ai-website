@@ -1,7 +1,7 @@
-import { LinkedInIcon, XIcon, YouTubeIcon } from "./icons";
+import { FacebookIcon, InstagramIcon, LinkedInIcon, XIcon, YouTubeIcon } from "./icons";
 import type { SocialLink } from "@/types/content";
 
-const iconFor = { LinkedIn: LinkedInIcon, X: XIcon, YouTube: YouTubeIcon } as const;
+const iconFor = { LinkedIn: LinkedInIcon, Facebook: FacebookIcon, Instagram: InstagramIcon, X: XIcon, YouTube: YouTubeIcon } as const;
 
 /** Only renders profiles that have a real URL, so no dead social links ship. */
 export function SocialLinks({ links }: { links: SocialLink[] }) {

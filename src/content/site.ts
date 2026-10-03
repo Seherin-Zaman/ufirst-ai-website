@@ -14,6 +14,7 @@ export const siteSettings: SiteSettings = {
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },
     { label: "Our Services", href: "/services" },
+    { label: "Our Products", href: "/products" },
     { label: "Partners", href: "/partners" },
     { label: "Resources", href: "/blog" },
     { label: "Contact", href: "/contact" },
@@ -27,11 +28,14 @@ export const siteSettings: SiteSettings = {
     // Paste a Google Maps embed URL here once the office address is confirmed.
     mapEmbedUrl: undefined,
   },
-  // Add `href` values when real profiles exist. Entries without href are not linked.
+  // Social icons in the footer. Paste each profile URL into `href` and the icon
+  // appears automatically; entries without an href stay hidden (no dead links).
   social: [
-    { platform: "LinkedIn" },
-    { platform: "X" },
-    { platform: "YouTube" },
+    { platform: "LinkedIn", href: undefined },
+    { platform: "Facebook", href: undefined },
+    { platform: "Instagram", href: undefined },
+    { platform: "X", href: undefined },
+    { platform: "YouTube", href: undefined },
   ],
   seo: {
     title: "uFirst AI — Build Smarter. Automate Faster. Scale with AI.",

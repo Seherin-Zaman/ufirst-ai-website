@@ -19,11 +19,54 @@ export const hero = {
   ],
 } as const;
 
+/**
+ * Homepage hero banner slides (auto-rotating). Slide 1 is the main brand
+ * message and carries the page's H1. To use a photo/graphic banner instead
+ * of the built-in illustration, add `image: "/images/banners/your-file.jpg"`.
+ */
+export type HeroSlide = {
+  id: string;
+  eyebrow: string;
+  titleLines: readonly string[];
+  titleHighlight: string;
+  description: string;
+  primary: { label: string; href: string };
+  secondary: { label: string; href: string };
+  visual: "network" | "leads" | "agents";
+  image?: string;
+};
+
+export const heroSlides: readonly HeroSlide[] = [
+  { id: "brand", ...hero, visual: "network" },
+  {
+    id: "sales-agent",
+    eyebrow: "Flagship product | AI Sales & Lead Generation Agent",
+    titleLines: ["Find the Right Leads.", "Reach Them First."],
+    titleHighlight: "Close with AI.",
+    description:
+      "Our AI Sales & Lead Generation Agent researches, qualifies and engages the decision-makers who matter to your business, so your team spends its time on conversations, not spreadsheets.",
+    primary: { label: "Explore Our Products", href: "/products" },
+    secondary: { label: "Book a Demo", href: "/contact" },
+    visual: "leads",
+  },
+  {
+    id: "agents",
+    eyebrow: "AI agents & automation | Built for your business",
+    titleLines: ["AI Agents That", "Work Around"],
+    titleHighlight: "the Clock.",
+    description:
+      "From AI receptionists and helpdesks to document processing and CRM automation, uFirst AI configures intelligent agents around the way your business already works.",
+    primary: { label: "View Our Services", href: "/services" },
+    secondary: { label: "Get in Touch", href: "#contact" },
+    visual: "agents",
+  },
+];
+
 export const about = {
   eyebrow: "About uFirst AI",
   title: "Your Trusted AI Partner for a Smarter Tomorrow",
   text:
-    "uFirst AI is an AI-focused team within uFirst Limited delivering practical, scalable AI automation and agentic AI solutions for businesses in Bangladesh and international markets. We help organizations work smarter, serve customers better and grow faster with AI.",
+    "uFirst AI Limited is an AI-focused company delivering practical, scalable AI automation and agentic AI solutions for businesses in Bangladesh and international markets. We help organizations work smarter, serve customers better and grow faster with AI.",
   cta: { label: "Learn More About Us", href: "/about" },
   pillars: [
     { icon: "bot", title: "AI Automation", text: "Automate routine tasks, boost productivity and reduce costs." },

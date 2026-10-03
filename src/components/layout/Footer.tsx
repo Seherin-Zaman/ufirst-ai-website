@@ -21,8 +21,8 @@ export async function Footer() {
       <Container className="py-14 md:py-16">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.6fr_0.8fr_1.1fr_0.8fr_1.3fr]">
           <div>
-            <Logo />
-            <p className="mt-5 max-w-sm text-[0.95rem] text-muted">
+            <Logo tone="light" />
+            <p className="mt-5 max-w-sm text-justify text-[0.95rem] hyphens-auto text-muted">
               uFirst AI delivers intelligent AI solutions, automation and agentic AI services to help businesses grow, innovate and succeed in
               the global market.
             </p>
@@ -96,7 +96,7 @@ export async function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col gap-3 border-t border-line pt-6 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
-          <p>© {year} uFirst Limited. All rights reserved.</p>
+          <p>© {year} uFirst AI Limited. All rights reserved.</p>
           <p>A Place of Excellence</p>
         </div>
       </Container>

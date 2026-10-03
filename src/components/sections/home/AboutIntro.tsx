@@ -8,17 +8,22 @@ import { homeIcons } from "./icons";
 export function AboutIntro() {
   return (
     <Section labelledBy="about-title" className="py-16! md:py-20!">
-      <div className="grid gap-10 lg:grid-cols-[0.72fr_1.6fr] lg:items-center lg:gap-12">
+      <div className="grid gap-8 lg:grid-cols-[0.72fr_1.6fr] lg:items-start lg:gap-12">
         <div>
-          <SectionHeading id="about-title" eyebrow={about.eyebrow} title={about.title} />
-          <p className="mt-5 text-muted">{about.text}</p>
-          <div className="mt-7">
+          <SectionHeading
+            id="about-title"
+            eyebrow={about.eyebrow}
+            title={about.title}
+            titleClassName="text-2xl! leading-[1.2]! sm:text-[1.75rem]! lg:text-[1.9rem]! text-justify"
+          />
+          <p className="mt-4 text-justify hyphens-auto text-muted">{about.text}</p>
+          <div className="mt-6">
             <Button href={about.cta.href} variant="gold" arrow>
               {about.cta.label}
             </Button>
           </div>
         </div>
-        <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+        <ul className="grid gap-4 sm:grid-cols-2 lg:mt-9 xl:grid-cols-4">
           {about.pillars.map((p) => {
             const Icon = homeIcons[p.icon];
             return (

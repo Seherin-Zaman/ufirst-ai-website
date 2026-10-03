@@ -5,11 +5,11 @@ import type { Partner } from "@/types/content";
 
 export function PartnersSection({ partners }: { partners: Partner[] }) {
   return (
-    <Section labelledBy="partners-title">
+    <Section id="management" labelledBy="partners-title">
       <SectionHeading
         id="partners-title"
-        title="Meet Our Partners"
-        description="The partners working with uFirst.Ai."
+        title="uFirst AI Management"
+        description="The management team working with uFirst.Ai."
       />
       <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {partners.map((p) => (

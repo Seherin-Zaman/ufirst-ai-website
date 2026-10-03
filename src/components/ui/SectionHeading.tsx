@@ -8,6 +8,7 @@ export function SectionHeading({
   align = "left",
   as: Tag = "h2",
   className,
+  titleClassName,
 }: {
   id?: string;
   eyebrow?: string;
@@ -16,6 +17,8 @@ export function SectionHeading({
   align?: "left" | "center";
   as?: "h1" | "h2" | "h3";
   className?: string;
+  /** Overrides the default heading size/alignment. */
+  titleClassName?: string;
 }) {
   return (
     <div className={cn("max-w-3xl", align === "center" && "mx-auto text-center", className)}>
@@ -35,6 +38,7 @@ export function SectionHeading({
         className={cn(
           "font-display font-semibold text-fg",
           Tag === "h1" ? "text-4xl leading-[1.05] sm:text-5xl lg:text-6xl" : "text-3xl leading-[1.1] sm:text-4xl lg:text-[2.75rem]",
+          titleClassName,
         )}
       >
         {title}

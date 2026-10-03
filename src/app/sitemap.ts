@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { siteSettings } from "@/content/site";
 import { getPosts, getServices } from "@/lib/content";
 
-const staticRoutes = ["", "/about", "/services", "/partners", "/contact", "/blog"];
+const staticRoutes = ["", "/about", "/services", "/products", "/partners", "/contact", "/blog"];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const [services, posts] = await Promise.all([getServices(), getPosts()]);

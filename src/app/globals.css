@@ -190,3 +190,29 @@
 /* Mobile menu open/closed states (visibility handled here so closed menus are not focusable) */
 .menu-panel[data-open="false"] { visibility: hidden; opacity: 0; transform: translateY(-8px); pointer-events: none; }
 .menu-panel[data-open="true"] { visibility: visible; opacity: 1; transform: none; }
+
+/* ------------------------------------------------------------------ */
+/* Homepage hero: automatic sliding banner                             */
+/* ------------------------------------------------------------------ */
+@keyframes hero-progress { from { width: 0; } to { width: 100%; } }
+@keyframes hero-in { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+@keyframes hero-flow { to { stroke-dashoffset: -24; } }
+@keyframes hero-spin { to { transform: rotate(360deg); } }
+@keyframes hero-pulse { 0%, 100% { opacity: 0.35; } 50% { opacity: 0.9; } }
+@keyframes hero-drop { 0% { transform: translateY(-6px); opacity: 0; } 30% { opacity: 1; } 100% { transform: translateY(26px); opacity: 0; } }
+
+.hero-progress { animation: hero-progress var(--hero-ms, 6500ms) linear forwards; }
+/* Text and visual of the incoming slide build in one after another. */
+.hero-slide[data-active="true"] .hero-in { animation: hero-in 800ms cubic-bezier(0.2, 0.7, 0.2, 1) both; animation-delay: var(--d, 0ms); }
+.hero-slide[data-active="false"] .hero-in { opacity: 0; }
+.hero-flow { animation: hero-flow 1.2s linear infinite; }
+.hero-spin { transform-box: fill-box; transform-origin: center; animation: hero-spin 40s linear infinite; }
+.hero-pulse { animation: hero-pulse 2.4s ease-in-out infinite; }
+.hero-drop { animation: hero-drop 2.6s ease-in infinite; }
+
+/* Visitors who turn on "Reduce motion" still get the automatic slideshow,
+   just without the decorative movement. */
+@media (prefers-reduced-motion: reduce) {
+  .hero-flow, .hero-spin, .hero-pulse, .hero-drop { animation: none; }
+  .hero-slide[data-active="true"] .hero-in { animation-duration: 1ms; }
+}
