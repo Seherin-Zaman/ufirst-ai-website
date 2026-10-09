@@ -5,7 +5,7 @@ export const authors: Author[] = [
     id: "editorial",
     name: "uFirst.Ai Editorial",
     role: "Editorial team",
-    bio: "Articles from the uFirst.Ai team on AI automation, knowledge retrieval and business systems. Author details are a placeholder until real authors are added.",
-    isPlaceholder: true,
+    bio: "Articles from the uFirst.Ai team on AI automation, knowledge retrieval and business systems.",
+    isPlaceholder: false,
   },
 ];

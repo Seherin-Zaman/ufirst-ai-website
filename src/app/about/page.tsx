@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/ui/PageHero";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { PlaceholderTag } from "@/components/ui/PlaceholderTag";
 import { Reveal } from "@/components/ui/Reveal";
 import { expertiseAreas, technologyFoundation, whyChooseUs, workingPrinciples } from "@/content/platform";
 import { buildMetadata } from "@/lib/seo";
@@ -61,9 +60,8 @@ export default function AboutPage() {
         <SectionHeading
           id="values-title"
           title="Company values"
-          description="Formal company values are still to be confirmed. Until then, these are the working principles that come directly from how uFirst.Ai delivers its systems."
+          description="The principles behind every system uFirst.Ai delivers."
         />
-        <div className="mt-3"><PlaceholderTag>Draft — confirm wording</PlaceholderTag></div>
         <ul className="mt-10 grid gap-x-12 md:grid-cols-2">
           {workingPrinciples.map((v) => (
             <li key={v.title} className="border-t border-line py-6">

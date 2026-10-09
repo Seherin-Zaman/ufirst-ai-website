@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/ui/PageHero";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { PlaceholderTag } from "@/components/ui/PlaceholderTag";
 import { Button } from "@/components/ui/Button";
 import { PartnerForm } from "@/components/forms/PartnerForm";
 import { partnerBenefits, partnershipProcess, partnershipTypes, partnerTypeOptions, whyPartner } from "@/content/partners";
@@ -40,11 +39,10 @@ export default function PartnersPage() {
       </Section>
 
       <Section tone="mist" labelledBy="types-title">
-        <SectionHeading id="types-title" title="Partnership types" description="The partnership programme is still being defined. The entries below are placeholders." />
-        <div className="mt-3"><PlaceholderTag>Draft — to be confirmed</PlaceholderTag></div>
+        <SectionHeading id="types-title" title="Partnership types" description="Choose the partnership model that fits how you work with your clients." />
         <div className="mt-10 grid gap-5 md:grid-cols-3">
           {partnershipTypes.map((t) => (
-            <div key={t.title} className="rounded-3xl border border-dashed border-gold-500/70 bg-surface p-7">
+            <div key={t.title} className="rounded-3xl border border-line bg-surface p-7">
               <h3 className="font-display text-xl font-semibold">{t.title}</h3>
               <p className="mt-2 text-muted">{t.text}</p>
             </div>
@@ -54,7 +52,6 @@ export default function PartnersPage() {
 
       <Section labelledBy="benefits-title">
         <SectionHeading id="benefits-title" title="Benefits" />
-        <div className="mt-3"><PlaceholderTag>Draft — to be confirmed</PlaceholderTag></div>
         <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {partnerBenefits.map((b) => (
             <li key={b.title} className="rounded-3xl border border-line bg-surface p-6">

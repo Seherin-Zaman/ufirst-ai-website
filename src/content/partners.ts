@@ -19,23 +19,23 @@ export const whyPartner = [
 ];
 
 export const partnershipTypes = [
-  { title: "Partnership type one", text: "Description of this partnership type to be confirmed." },
-  { title: "Partnership type two", text: "Description of this partnership type to be confirmed." },
-  { title: "Partnership type three", text: "Description of this partnership type to be confirmed." },
+  { title: "Referral Partner", text: "Introduce businesses that need AI automation and earn a reward for every client who signs up. No technical work needed." },
+  { title: "Reseller / White-label Partner", text: "Offer uFirst.Ai agents and automation to your own clients under your brand, while our team handles the build and support." },
+  { title: "Technology & Integration Partner", text: "Software companies, agencies and consultancies that connect their platforms with our AI agents or deliver projects alongside us." },
 ];
 
 export const partnerBenefits = [
-  { title: "Benefit one", text: "Partner benefit to be confirmed." },
-  { title: "Benefit two", text: "Partner benefit to be confirmed." },
-  { title: "Benefit three", text: "Partner benefit to be confirmed." },
-  { title: "Benefit four", text: "Partner benefit to be confirmed." },
+  { title: "Earn on every client", text: "Earn revenue for every business you introduce or serve through the partnership." },
+  { title: "Ready-to-sell solutions", text: "Proven AI agents for reception, customer support and lead generation that you can offer straight away." },
+  { title: "Dedicated partner support", text: "A named contact plus help with demos, onboarding and delivery." },
+  { title: "Global reach", text: "Work with us across Bangladesh, the UK, Malaysia, Europe, North America and Australia." },
 ];
 
 export const partnershipProcess = [
   { title: "Get in touch", text: "Send us your details and the kind of partnership you have in mind." },
   { title: "Explore fit", text: "We talk through your business, clients and goals." },
   { title: "Agree the approach", text: "Partnership terms and ways of working are confirmed." },
-  { title: "Get started", text: "Onboarding steps to be confirmed." },
+  { title: "Get started", text: "We onboard you with training and sales materials, then start working together on your first clients." },
 ];
 
-export const partnerTypeOptions = ["Partnership type one", "Partnership type two", "Partnership type three", "Not sure yet"];
+export const partnerTypeOptions = ["Referral Partner", "Reseller / White-label Partner", "Technology & Integration Partner", "Not sure yet"];

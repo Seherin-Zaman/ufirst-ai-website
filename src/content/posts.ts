@@ -18,7 +18,7 @@ export const posts: BlogPost[] = [
     publishedAt: "2026-09-01",
     readingMinutes: 4,
     featured: true,
-    isPlaceholder: true,
+    isPlaceholder: false,
     body: [
       {
         type: "p",
@@ -62,7 +62,7 @@ export const posts: BlogPost[] = [
     authorId: "editorial",
     publishedAt: "2026-09-08",
     readingMinutes: 4,
-    isPlaceholder: true,
+    isPlaceholder: false,
     body: [
       {
         type: "p",
@@ -102,7 +102,7 @@ export const posts: BlogPost[] = [
     authorId: "editorial",
     publishedAt: "2026-09-15",
     readingMinutes: 4,
-    isPlaceholder: true,
+    isPlaceholder: false,
     body: [
       {
         type: "p",
@@ -141,7 +141,7 @@ export const posts: BlogPost[] = [
     authorId: "editorial",
     publishedAt: "2026-09-22",
     readingMinutes: 3,
-    isPlaceholder: true,
+    isPlaceholder: false,
     body: [
       {
         type: "p",
