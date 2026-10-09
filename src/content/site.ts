@@ -23,7 +23,7 @@ export const siteSettings: SiteSettings = {
   contact: {
     address: { value: "Office address to be supplied", isPlaceholder: true },
     phone: { value: "Phone number to be supplied", isPlaceholder: true },
-    email: { value: "ufirstai.uk@gmail.com", isPlaceholder: false },
+    email: { value: "info@ufirstai.com", isPlaceholder: false },
     whatsapp: { value: "+44 7454 935517", isPlaceholder: false },
     // Paste a Google Maps embed URL here once the office address is confirmed.
     mapEmbedUrl: undefined,

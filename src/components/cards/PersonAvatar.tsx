@@ -4,13 +4,12 @@ import { cn } from "@/lib/cn";
 import { initials } from "@/lib/format";
 import type { Person } from "@/types/content";
 
-/** Photo when supplied; otherwise initials (real person) or a neutral silhouette (placeholder). */
-export function PersonAvatar({ person, portrait, className }: { person: Person; portrait?: boolean; className?: string }) {
+/** Circular photo when supplied; otherwise initials (real person) or a neutral silhouette (placeholder). */
+export function PersonAvatar({ person, className }: { person: Person; portrait?: boolean; className?: string }) {
   return (
     <div
       className={cn(
-        "relative overflow-hidden bg-forest-900",
-        portrait ? "aspect-[4/5]" : "aspect-[5/4] sm:aspect-[4/5]",
+        "relative mx-auto mt-8 aspect-square w-40 shrink-0 overflow-hidden rounded-full bg-forest-900 ring-4 ring-line sm:w-44",
         className,
       )}
     >
@@ -19,8 +18,8 @@ export function PersonAvatar({ person, portrait, className }: { person: Person; 
           src={person.photo.src}
           alt={person.photo.alt}
           fill
-          sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
-          className="object-cover"
+          sizes="176px"
+          className="object-cover object-[50%_30%]"
         />
       ) : (
         <div
@@ -33,9 +32,9 @@ export function PersonAvatar({ person, portrait, className }: { person: Person; 
           }}
         >
           {person.isPlaceholder ? (
-            <UserRound aria-hidden strokeWidth={1.2} className="size-20 opacity-60" />
+            <UserRound aria-hidden strokeWidth={1.2} className="size-14 opacity-60" />
           ) : (
-            <span className="font-display text-5xl font-semibold">{initials(person.name)}</span>
+            <span className="font-display text-4xl font-semibold">{initials(person.name)}</span>
           )}
         </div>
       )}

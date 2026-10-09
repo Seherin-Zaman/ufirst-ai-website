@@ -8,7 +8,7 @@ export function PersonCard({ person, compact, portrait }: { person: Person; comp
   return (
     <article className="flex h-full flex-col overflow-hidden rounded-3xl border border-line bg-surface">
       <PersonAvatar person={person} portrait={portrait} />
-      <div className="flex flex-1 flex-col p-6">
+      <div className="flex flex-1 flex-col items-center p-6 text-center">
         {person.isPlaceholder && <PlaceholderTag className="mb-3 self-start" />}
         <h3 className="font-display text-xl font-semibold text-fg">{person.name}</h3>
         <p className="mt-0.5 text-[0.95rem] font-medium text-accent">{person.designation}</p>
