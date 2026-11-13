@@ -5,6 +5,7 @@ import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
 import { buildMetadata } from "@/lib/seo";
+import { ProductLinks } from "@/components/sections/ProductLinks";
 
 export const metadata: Metadata = buildMetadata({
   title: "Our Products — AI Sales & Lead Generation Agent",
@@ -37,6 +38,8 @@ export default function ProductsPage() {
         description="Alongside our tailored AI services, uFirst AI builds ready-to-deploy AI products. Our flagship is the AI Sales & Lead Generation Agent."
         breadcrumbs={[{ label: "Our Products", href: "/products" }]}
       />
+
+      <ProductLinks />
 
       <Section labelledBy="flagship-title">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
